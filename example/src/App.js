@@ -1,10 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-import { ExampleComponent } from 'modal-custom-jb'
+import { ModalCustom } from 'modal-custom-jb'
 import 'modal-custom-jb/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [isOpen, setIsOpen] = useState(false)
+  const closeModal = () => {
+    setIsOpen(!isOpen)
+  }
+
+  return (
+    <>
+      <button onClick={closeModal}>click to open modal</button>
+      
+      <ModalCustom 
+        isOpen={isOpen} 
+        message="Création du nouvel employé réussi !" 
+        messageColor="#93ad18" 
+        closeModal={closeModal} 
+        animation="right" 
+        border="success" 
+      />
+    </>
+  )
 }
 
 export default App

@@ -13,16 +13,32 @@ npm install --save modal-custom-jb
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'modal-custom-jb'
+import React, {useState} from 'react'
+import { ModalCustom } from 'modal-custom-jb'
 import 'modal-custom-jb/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
+const App = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const closeModal = () => {
+    setIsOpen(!isOpen)
   }
+
+  return (
+    <>
+      <button onClick={closeModal}>click to open modal</button>
+      <ModalCustom 
+        isOpen={isOpen} 
+        message="Création du nouvel employé réussi !" 
+        messageColor="#93ad18" 
+        closeModal={closeModal} 
+        animation="right" 
+        border="success" 
+      />
+    </>
+  )
 }
+
+export default App
 ```
 
 ## License

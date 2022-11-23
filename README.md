@@ -35,7 +35,7 @@ npm install --save modal-custom-jb
 | animationType | up          | the modal will appear when descending                     |
 |               | dowm        | the modal will appear ascending                           |
 |               | left        | the modal will appear coming from the left of the screen  |
-|               | left        | the modal will appear coming from the right of the screen |
+|               | right       | the modal will appear coming from the right of the screen |
 
 
 ## Usage

@@ -99,18 +99,18 @@ export const ModalContent = styled.div`
     animation: ${(props) => typeAnimation(props.animationType)}
 `
 /* ===== IMAGE CLOSE ===== */
-export const ModalWrapperIcon = styled.div`
+export const ModalWrapperBtn = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
 `
-export const ModalIcon = styled.p`
-  line-height: 30px;
-  text-align: center;
+export const ModalBtn = styled.button`
   margin: 0;
   color: #ffffff;
+  font-weight: bold;
   width: 35px;
   height: 35px;
+  border: none;
   border-radius: 20px;
   background-color: #000000;
   position: relative;

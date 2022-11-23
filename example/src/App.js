@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 
 import { ModalCustom } from 'modal-custom-jb'
-import 'modal-custom-jb/dist/index.css'
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false)

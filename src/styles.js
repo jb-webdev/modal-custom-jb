@@ -71,7 +71,7 @@ const typeAnimation = (animation) => {
 const borderColor = (borderType) => {
   switch (borderType) {
     case 'success':
-      return css`4px solid #93ad18;`
+      return css`4px solid green;`
     case 'alert':
       return css`4px solid red;`
     default:
@@ -124,7 +124,7 @@ export const ModalIcon = styled.p`
 `
 /* ===== MESSAGE ===== */
 export const ModalMessage = styled.p`
-  color: ${(props) => (props.color ? props.color : '#313131')};
+  color: ${(props) => (props.color ? props.color : '#000000')};
   text-align: center;
   margin-top: 0;
   margin-bottom: 30px;

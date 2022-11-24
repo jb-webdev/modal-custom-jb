@@ -15,7 +15,6 @@ export const ModalCustom = ({
   message,
   messageColor
 }) => {
-  console.log(isOpen)
   return (
     <Modal openClose={isOpen}>
       <ModalContent animationType={animation} borderColor={border}>

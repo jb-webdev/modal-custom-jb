@@ -3,20 +3,23 @@ import React, {useState} from 'react'
 import { ModalCustom } from 'modal-custom-jb'
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const closeModal = () => {
-    setIsOpen(!isOpen)
+  // function to display the modal in the example
+  const clickButton = () => {
+    setIsOpen(true)
   }
+
+  // modal display state needed
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
-      <button onClick={closeModal}>click to open modal</button>
+      <button onClick={clickButton}>click to open modal</button>
       
       <ModalCustom 
-        isOpen={isOpen} 
+        openModal={isOpen}
+        closeModal= {setIsOpen}
         message="Création du nouvel employé réussi !" 
-        messageColor="#93ad18" 
-        closeModal={closeModal} 
+        messageColor="#93ad18"
         animation="right" 
         border="success" 
       />

@@ -8,18 +8,21 @@ import {
 } from './styles.js'
 
 export const ModalCustom = ({
-  isOpen,
+  openModal,
+  closeModal,
   animation,
   border,
-  closeModal,
   message,
   messageColor
 }) => {
+  const handleClickClose = () => {
+    closeModal(false)
+  }
   return (
-    <Modal openClose={isOpen}>
+    <Modal openClose={openModal}>
       <ModalContent animationType={animation} borderColor={border}>
         <ModalWrapperBtn>
-          <ModalBtn onClick={closeModal}>X</ModalBtn>
+          <ModalBtn onClick={handleClickClose}>X</ModalBtn>
         </ModalWrapperBtn>
         <ModalMessage color={messageColor}>{message}</ModalMessage>
       </ModalContent>

@@ -10,6 +10,9 @@ const App = () => {
 
   // modal display state needed
   const [isOpen, setIsOpen] = useState(false)
+  const modalIsClose = () => {
+    setIsOpen(false)
+  }
 
   return (
     <>
@@ -17,7 +20,7 @@ const App = () => {
       
       <ModalCustom 
         openModal={isOpen}
-        closeModal= {setIsOpen}
+        closeModal= {modalIsClose}
         message="Création du nouvel employé réussi !" 
         messageColor="#93ad18"
         animation="right" 

@@ -16,7 +16,7 @@ export const ModalCustom = ({
   messageColor
 }) => {
   const handleClickClose = () => {
-    closeModal(false)
+    closeModal()
   }
   return (
     <Modal openClose={openModal}>

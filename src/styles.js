@@ -74,6 +74,8 @@ const borderColor = (borderType) => {
       return css`4px solid green;`
     case 'alert':
       return css`4px solid red;`
+    case 'blue':
+      return css`4px solid blue;`
     default:
       return css`none`
   }
@@ -128,4 +130,6 @@ export const ModalMessage = styled.p`
   text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bolder;
 `

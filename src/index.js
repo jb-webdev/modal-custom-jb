@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Modal,
   ModalContent,
@@ -15,11 +15,19 @@ export const ModalCustom = ({
   message,
   messageColor
 }) => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  if (openModal && !isVisible) {
+    setIsVisible(true)
+  }
+
   const handleClickClose = () => {
+    setIsVisible(false)
     closeModal()
   }
+
   return (
-    <Modal openClose={openModal}>
+    <Modal openClose={isVisible}>
       <ModalContent animationType={animation} borderColor={border}>
         <ModalWrapperBtn>
           <ModalBtn onClick={handleClickClose}>X</ModalBtn>

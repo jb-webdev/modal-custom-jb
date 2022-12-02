@@ -12,3 +12,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  height: 100vh;
+  background-color: #727070;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnForExample {
+  background-color: #1d34a8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btnForExample:hover {
+  background-color: #256edc;
+}
+.messageExample {
+  font-size: 32px;
+  font-weight: bolder;
+  background-color: #cacaca;
+  color: #1d34a8;
+  text-align: center;
+}
